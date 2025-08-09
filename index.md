@@ -1,16 +1,45 @@
 ## PMC Virtual Eyes — Germany (Frontend, Flutter Web)
 
-Flutter Web frontend built as an outsourced engagement for Virtual Eyes in Germany. Delivered a single-page application with real-time dashboards and enterprise-grade UX.
+Flutter Web frontend for PMC — Precise Meta Controlling (Virtual Eye GmbH), delivered as a Germany-only outsourcing engagement. Single-page application focused on budget steering with plan/actual comparisons, forecast and reporting views, a centralized control layer, and audit-safe workflows.
 
 ### Frontend Highlights
-- Responsive Flutter Web UI
-- Real-time data via WebSocket streams
-- Localization: de-DE (Germany)
-- Role-based views and routing
+- Spreadsheet-like tables for plan/actual comparisons
+- Forecast and reporting dashboards
+- Real-time data refresh with status indicators
+- Integration surfaces for SAP, MS Project, Oracle, Ivalua
+- Audit trail and change history visualizations
+- Role-based navigation and permissions
+- German localization (de-DE)
+- Responsive layout and accessibility
 
  
-
  
+ 
+ 
+ ---
+## Béthune-Bruay, My Agglo
+
+Mobile-first municipal app facilitating access to information for the Communauté d’Agglomération Béthune-Bruay Artois Lys Romane. From a phone, users can easily read news, consult agendas, browse photo albums showcasing the territory, geolocate Agglo facilities, and access practical information.
+
+### Scope
+- News and agendas
+- Photo albums highlighting local assets
+- Geolocation of Agglo equipment and facilities
+- Practical information and contacts
+- Localization: fr-FR
+
+---
+
+## Montévrain — L’appli
+
+City app enabling residents to participate and stay informed. Includes instant participatory reporting for public-space issues (graffiti, litter, wild signage, potholes, lighting, unsealed sewers, parking, incivility), comprehensive municipal news (planning, council, transport, budget, works, schools, sports, culture), alerts for major or exceptional events (e.g., snow alerts, facility closures), and various online services.
+
+### Scope
+- Participatory issue reporting with simplified forms
+- Municipal news, media (photos, videos), and magazines
+- Push-style alerts for exceptional events
+- Online municipal services
+- Localization: fr-FR
 
 ---
 
@@ -68,6 +97,18 @@ A comprehensive ERP platform combining powerful NestJS backend with intuitive Fl
 ### 🎥 Full-stack community management with Flutter and NestJS
 
 A complete digital ecosystem for condominium communities featuring Flutter mobile application with advanced WebRTC integration and NestJS backend powering real-time communications, IoT device management, and community engagement.
+
+### Features
+- Co-owners and tenants:
+  - General requests: fob orders, repairs, moving requests, intercom change, complaints
+  - Communication: chat with the community, general information and communication
+  - Booking system: amenities reservation (pool, gym, lounge room, etc.)
+  - Marketplace
+- Library:
+  - Important building documents: by-laws, declarations, minutes of assembly
+  - Special access: Board of Directors
+- Board for Management:
+  - Administrators, committee, residents, staff
 
 ### 🎥 **Advanced Real-Time Features**
 
