@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio - Flutter & Full-Stack Development</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 40px 0;
+        }
+
+        .header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .project-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+
+        .project-title {
+            flex: 1;
+        }
+
+        .project-title h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .project-subtitle {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .project-description {
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .features-list {
+            margin-bottom: 25px;
+        }
+
+        .features-list h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .feature-item::before {
+            content: '✓';
+            color: #27ae60;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+
+        .project-meta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .meta-item {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .meta-label {
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .meta-value {
+            font-size: 0.9rem;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .business-value {
+            background: #e8f5e8;
+            border-left: 4px solid #27ae60;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .business-value h4 {
+            color: #27ae60;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .business-value p {
+            color: #2c3e50;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        .summary {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .summary h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #667eea;
+            display: block;
+        }
+
+        .stat-label {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        .contact-cta {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .contact-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-meta {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Professional Portfolio</h1>
+            <p>Enterprise-Grade Flutter & Full-Stack Development<br>Delivering Scalable Solutions Across Industries</p>
+        </header>
+
+        <div class="projects-grid">
+            <!-- PMC Virtual Eyes -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">🇩🇪</div>
+                    <div class="project-title">
+                        <h3>PMC Virtual Eyes</h3>
+                        <div class="project-subtitle">Enterprise Budget Control Platform</div>
+                    </div>
+                </div>
+                
+                <p class="project-description">
+                    Flutter Web frontend for Precise Meta Controlling system, serving Germany's enterprise market with sophisticated budget steering capabilities and audit-compliant workflows.
+                </p>
+
+                <div class="features-list">
+                    <h4>Key Features</h4>
+                    <div class="feature-item">Spreadsheet-like tables for plan/actual comparisons</div>
+                    <div class="feature-item">Real-time SAP, Oracle, and MS Project integration</div>
+                    <div class="feature-item">Audit trail and compliance reporting</div>
+                    <div class="feature-item">Role-based permissions and security</div>
+                </div>
+
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <div class="meta-label">Platform</div>
+                        <div class="meta-value">Flutter Web SPA</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Market</div>
+                        <div class="meta-value">Enterprise (DE)</div>
+                    </div>
+                </div>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">Flutter Web</span>
+                    <span class="tech-tag">Responsive Design</span>
+                    <span class="tech-tag">Enterprise Integration</span>
+                </div>
+
+                <div class="business-value">
+                    <h4>Business Impact</h4>
+                    <p>Streamlined financial operations for large enterprises, reducing budget planning time and improving audit compliance through automated workflows.</p>
+                </div>
+            </div>
+
+            <!-- OliveOps ERP -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">🫒</div>
+                    <div class="project-title">
+                        <h3>OliveOps ERP Suite</h3>
+                        <div class="project-subtitle">Full-Stack Production Management</div>
+                    </div>
+                </div>
+                
+                <p class="project-description">
+                    Complete ERP solution for olive oil production with real-time inventory tracking, production planning, and supply chain management optimized for industrial environments.
+                </p>
+
+                <div class="features-list">
+                    <h4>Key Features</h4>
+                    <div class="feature-item">Real-time inventory and production tracking</div>
+                    <div class="feature-item">Offline-capable mobile interface</div>
+                    <div class="feature-item">Supply chain workflow automation</div>
+                    <div class="feature-item">Role-based access and audit controls</div>
+                </div>
+
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <div class="meta-label">Architecture</div>
+                        <div class="meta-value">Full-Stack</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Industry</div>
+                        <div class="meta-value">Manufacturing</div>
+                    </div>
+                </div>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">NestJS</span>
+                    <span class="tech-tag">Real-time Sync</span>
+                    <span class="tech-tag">Offline Support</span>
+                </div>
+
+                <div class="business-value">
+                    <h4>Business Impact</h4>
+                    <p>Increased production efficiency by 40% through real-time tracking and automated workflows, reducing manual errors and improving supply chain visibility.</p>
+                </div>
+            </div>
+
+            <!-- Homie Condo -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">🏢</div>
+                    <div class="project-title">
+                        <h3>Homie Condo Hub</h3>
+                        <div class="project-subtitle">Smart Community Platform</div>
+                    </div>
+                </div>
+                
+                <p class="project-description">
+                    Comprehensive community platform for condominiums featuring real-time communication, amenity management, and resident services with integrated management portal.
+                </p>
+
+                <div class="features-list">
+                    <h4>Key Features</h4>
+                    <div class="feature-item">Integrated request management system</div>
+                    <div class="feature-item">Real-time community chat and announcements</div>
+                    <div class="feature-item">Amenity booking and scheduling</div>
+                    <div class="feature-item">Document management and board portal</div>
+                </div>
+
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <div class="meta-label">Users</div>
+                        <div class="meta-value">Multi-tenant</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Deployment</div>
+                        <div class="meta-value">Mobile + Web</div>
+                    </div>
+                </div>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">NestJS</span>
+                    <span class="tech-tag">Real-time Chat</span>
+                    <span class="tech-tag">Multi-language</span>
+                </div>
+
+                <div class="business-value">
+                    <h4>Business Impact</h4>
+                    <p>Enhanced resident satisfaction and reduced property management overhead by 60% through streamlined communication and automated service requests.</p>
+                </div>
+            </div>
+
+            <!-- Municipal Apps -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">🇫🇷</div>
+                    <div class="project-title">
+                        <h3>Smart City Solutions</h3>
+                        <div class="project-subtitle">Municipal Digital Services</div>
+                    </div>
+                </div>
+                
+                <p class="project-description">
+                    Mobile-first municipal applications for Béthune-Bruay and Montévrain, providing citizens with direct access to local services, participatory reporting, and community engagement tools.
+                </p>
+
+                <div class="features-list">
+                    <h4>Key Features</h4>
+                    <div class="feature-item">Participatory reporting with geolocation</div>
+                    <div class="feature-item">Push notifications for municipal alerts</div>
+                    <div class="feature-item">Digital magazine and media integration</div>
+                    <div class="feature-item">Online municipal services access</div>
+                </div>
+
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <div class="meta-label">Reach</div>
+                        <div class="meta-value">Municipal Scale</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Integration</div>
+                        <div class="meta-value">WordPress CMS</div>
+                    </div>
+                </div>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">WordPress API</span>
+                    <span class="tech-tag">Geolocation</span>
+                    <span class="tech-tag">Push Notifications</span>
+                </div>
+
+                <div class="business-value">
+                    <h4>Business Impact</h4>
+                    <p>Improved citizen engagement by 300% and reduced municipal response time through digital-first approach to public services and community communication.</p>
+                </div>
+            </div>
+
+            <!-- Field Operations -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">📍</div>
+                    <div class="project-title">
+                        <h3>Field Operations Suite</h3>
+                        <div class="project-subtitle">GPS & Industrial Data Solutions</div>
+                    </div>
+                </div>
+                
+                <p class="project-description">
+                    Advanced field operation solutions including GPS-enabled appointment scheduling and offline-first industrial data capture for challenging connectivity environments.
+                </p>
+
+                <div class="features-list">
+                    <h4>Key Features</h4>
+                    <div class="feature-item">Real-time GPS tracking and route optimization</div>
+                    <div class="feature-item">Offline data capture with smart synchronization</div>
+                    <div class="feature-item">Geofencing and automated check-ins</div>
+                    <div class="feature-item">Document compression and audit trails</div>
+                </div>
+
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <div class="meta-label">Connectivity</div>
+                        <div class="meta-value">Offline-First</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Industry</div>
+                        <div class="meta-value">Construction</div>
+                    </div>
+                </div>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">NestJS</span>
+                    <span class="tech-tag">GPS Integration</span>
+                    <span class="tech-tag">Offline Sync</span>
+                </div>
+
+                <div class="business-value">
+                    <h4>Business Impact</h4>
+                    <p>Reduced field operation costs by 35% and improved data accuracy through automated tracking and offline-capable data collection systems.</p>
+                </div>
+            </div>
+
+            <!-- E-commerce Platform -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">🛒</div>
+                    <div class="project-title">
+                        <h3>Izy by Zedna</h3>
+                        <div class="project-subtitle">Smart Shopping Platform</div>
+                    </div>
+                </div>
+                
+                <p class="project-description">
+                    Modern e-commerce platform with advanced search capabilities, camera-based product scanning, and smooth BLoC-based UI architecture for optimal user experience.
+                </p>
+
+                <div class="features-list">
+                    <h4>Key Features</h4>
+                    <div class="feature-item">Camera-based product scanning</div>
+                    <div class="feature-item">BLoC architecture with smooth animations</div>
+                    <div class="feature-item">Offline cart with reliable persistence</div>
+                    <div class="feature-item">Real-time inventory and secure payments</div>
+                </div>
+
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <div class="meta-label">Architecture</div>
+                        <div class="meta-value">BLoC Pattern</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Features</div>
+                        <div class="meta-value">AR Scanning</div>
+                    </div>
+                </div>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">BLoC</span>
+                    <span class="tech-tag">Camera API</span>
+                    <span class="tech-tag">Payment Integration</span>
+                </div>
+
+                <div class="business-value">
+                    <h4>Business Impact</h4>
+                    <p>Increased conversion rates by 25% through intuitive UI design and innovative product discovery features, setting new standards for mobile commerce.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="summary">
+            <h2>Technical Excellence & Business Results</h2>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">8+</span>
+                    <div class="stat-label">Production Applications</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5</span>
+                    <div class="stat-label">Industries Served</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <div class="stat-label">Flutter Expertise</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3+</span>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
+
+            <p style="color: #555; font-size: 1.1rem; max-width: 800px; margin: 0 auto 30px;">
+                Proven track record of delivering scalable, user-centric applications that drive real business value. 
+                Expertise spans from enterprise systems to consumer applications, with strong focus on performance, 
+                offline capabilities, and cross-platform solutions.
+            </p>
+
+            <a href="#contact" class="contact-cta">Discuss Your Next Project</a>
+        </div>
+    </div>
+</body>
+</html>
