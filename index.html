@@ -179,24 +179,71 @@
             font-weight: 500;
         }
 
-        .business-value {
-            background: #e8f5e8;
-            border-left: 4px solid #27ae60;
+        .audience-info {
+            background: #f8f9fa;
+            border-radius: 10px;
             padding: 15px;
             margin-top: 20px;
-            border-radius: 0 10px 10px 0;
         }
 
-        .business-value h4 {
-            color: #27ae60;
+        .audience-info h4 {
+            color: #495057;
             margin-bottom: 8px;
             font-size: 0.9rem;
+            font-weight: 600;
         }
 
-        .business-value p {
-            color: #2c3e50;
+        .audience-info p {
+            color: #6c757d;
             font-size: 0.85rem;
             line-height: 1.5;
+            margin: 0;
+        }
+
+        .project-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .highlight-badge {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .integration-list {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .integration-list h4 {
+            color: #495057;
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .integration-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .integration-tag {
+            background: #e9ecef;
+            color: #495057;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
         }
 
         .summary {
@@ -276,8 +323,8 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1>Professional Portfolio</h1>
-            <p>Enterprise-Grade Flutter & Full-Stack Development<br>Delivering Scalable Solutions Across Industries</p>
+            <h1>Project Portfolio</h1>
+            <p>Flutter & Full-Stack Development Projects</p>
         </header>
 
         <div class="projects-grid">
@@ -317,12 +364,22 @@
                 <div class="tech-stack">
                     <span class="tech-tag">Flutter Web</span>
                     <span class="tech-tag">Responsive Design</span>
-                    <span class="tech-tag">Enterprise Integration</span>
+                    <span class="tech-tag">Real-time Data</span>
                 </div>
 
-                <div class="business-value">
-                    <h4>Business Impact</h4>
-                    <p>Streamlined financial operations for large enterprises, reducing budget planning time and improving audit compliance through automated workflows.</p>
+                <div class="integration-list">
+                    <h4>Enterprise Integrations</h4>
+                    <div class="integration-tags">
+                        <span class="integration-tag">SAP</span>
+                        <span class="integration-tag">Oracle</span>
+                        <span class="integration-tag">MS Project</span>
+                        <span class="integration-tag">Ivalua</span>
+                    </div>
+                </div>
+
+                <div class="audience-info">
+                    <h4>Target Audience</h4>
+                    <p>Finance, Controlling, and PMO teams in large German enterprises requiring audit-compliant budget management workflows.</p>
                 </div>
             </div>
 
@@ -366,9 +423,15 @@
                     <span class="tech-tag">Offline Support</span>
                 </div>
 
-                <div class="business-value">
-                    <h4>Business Impact</h4>
-                    <p>Increased production efficiency by 40% through real-time tracking and automated workflows, reducing manual errors and improving supply chain visibility.</p>
+                <div class="project-highlights">
+                    <span class="highlight-badge">Mobile-First UI</span>
+                    <span class="highlight-badge">Factory Environment</span>
+                    <span class="highlight-badge">Multi-language</span>
+                </div>
+
+                <div class="audience-info">
+                    <h4>Target Audience</h4>
+                    <p>Production operators, factory managers, and supply chain coordinators in olive oil manufacturing facilities.</p>
                 </div>
             </div>
 
@@ -409,87 +472,202 @@
                     <span class="tech-tag">Flutter</span>
                     <span class="tech-tag">NestJS</span>
                     <span class="tech-tag">Real-time Chat</span>
-                    <span class="tech-tag">Multi-language</span>
+                    <span class="tech-tag">Multi-tenant</span>
                 </div>
 
-                <div class="business-value">
-                    <h4>Business Impact</h4>
-                    <p>Enhanced resident satisfaction and reduced property management overhead by 60% through streamlined communication and automated service requests.</p>
+                <div class="project-highlights">
+                    <span class="highlight-badge">Community Platform</span>
+                    <span class="highlight-badge">Document Management</span>
+                    <span class="highlight-badge">Marketplace</span>
+                </div>
+
+                <div class="audience-info">
+                    <h4>Target Audience</h4>
+                    <p>Co-owners, tenants, property management companies, and board members in residential condominium communities.</p>
                 </div>
             </div>
 
-            <!-- Municipal Apps -->
+            <!-- Béthune-Bruay App -->
             <div class="project-card">
                 <div class="project-header">
                     <div class="project-icon">🇫🇷</div>
                     <div class="project-title">
-                        <h3>Smart City Solutions</h3>
-                        <div class="project-subtitle">Municipal Digital Services</div>
+                        <h3>Béthune-Bruay, My Agglo</h3>
+                        <div class="project-subtitle">Municipal Mobile App</div>
                     </div>
                 </div>
                 
                 <p class="project-description">
-                    Mobile-first municipal applications for Béthune-Bruay and Montévrain, providing citizens with direct access to local services, participatory reporting, and community engagement tools.
+                    Mobile-first municipal app for the Communauté d'Agglomération Béthune-Bruay Artois Lys Romane, providing residents easy access to local information directly from smartphones.
                 </p>
 
                 <div class="features-list">
                     <h4>Key Features</h4>
-                    <div class="feature-item">Participatory reporting with geolocation</div>
-                    <div class="feature-item">Push notifications for municipal alerts</div>
-                    <div class="feature-item">Digital magazine and media integration</div>
-                    <div class="feature-item">Online municipal services access</div>
+                    <div class="feature-item">News and agenda updates</div>
+                    <div class="feature-item">Photo albums showcasing local heritage</div>
+                    <div class="feature-item">Geolocation of facilities and public equipment</div>
+                    <div class="feature-item">Practical information and contact details</div>
                 </div>
 
                 <div class="project-meta">
                     <div class="meta-item">
-                        <div class="meta-label">Reach</div>
-                        <div class="meta-value">Municipal Scale</div>
+                        <div class="meta-label">Platform</div>
+                        <div class="meta-value">Mobile-First</div>
                     </div>
                     <div class="meta-item">
-                        <div class="meta-label">Integration</div>
-                        <div class="meta-value">WordPress CMS</div>
+                        <div class="meta-label">Localization</div>
+                        <div class="meta-value">fr-FR</div>
                     </div>
                 </div>
 
                 <div class="tech-stack">
                     <span class="tech-tag">Flutter</span>
-                    <span class="tech-tag">WordPress API</span>
+                    <span class="tech-tag">WordPress REST API</span>
                     <span class="tech-tag">Geolocation</span>
-                    <span class="tech-tag">Push Notifications</span>
                 </div>
 
-                <div class="business-value">
-                    <h4>Business Impact</h4>
-                    <p>Improved citizen engagement by 300% and reduced municipal response time through digital-first approach to public services and community communication.</p>
+                <div class="project-highlights">
+                    <span class="highlight-badge">Mobile-First</span>
+                    <span class="highlight-badge">Heritage Content</span>
+                    <span class="highlight-badge">Facility Finder</span>
+                </div>
+
+                <div class="audience-info">
+                    <h4>Target Audience</h4>
+                    <p>Residents and visitors of the Béthune-Bruay Artois Lys Romane metropolitan area seeking local information and services.</p>
                 </div>
             </div>
 
-            <!-- Field Operations -->
+            <!-- Montévrain App -->
             <div class="project-card">
                 <div class="project-header">
-                    <div class="project-icon">📍</div>
+                    <div class="project-icon">🇫🇷</div>
                     <div class="project-title">
-                        <h3>Field Operations Suite</h3>
-                        <div class="project-subtitle">GPS & Industrial Data Solutions</div>
+                        <h3>Montévrain — L'Appli</h3>
+                        <div class="project-subtitle">City Participation App</div>
                     </div>
                 </div>
                 
                 <p class="project-description">
-                    Advanced field operation solutions including GPS-enabled appointment scheduling and offline-first industrial data capture for challenging connectivity environments.
+                    Comprehensive city app enabling Montévrain residents to stay informed and actively participate in community life through digital civic engagement tools.
                 </p>
 
                 <div class="features-list">
                     <h4>Key Features</h4>
-                    <div class="feature-item">Real-time GPS tracking and route optimization</div>
-                    <div class="feature-item">Offline data capture with smart synchronization</div>
-                    <div class="feature-item">Geofencing and automated check-ins</div>
-                    <div class="feature-item">Document compression and audit trails</div>
+                    <div class="feature-item">Instant participatory reporting for public issues</div>
+                    <div class="feature-item">Municipal news, photos, videos, and digital magazines</div>
+                    <div class="feature-item">Push alerts for exceptional events and closures</div>
+                    <div class="feature-item">Access to online municipal services</div>
                 </div>
 
                 <div class="project-meta">
                     <div class="meta-item">
-                        <div class="meta-label">Connectivity</div>
-                        <div class="meta-value">Offline-First</div>
+                        <div class="meta-label">Platform</div>
+                        <div class="meta-value">Mobile App</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Audience</div>
+                        <div class="meta-value">Citizens</div>
+                    </div>
+                </div>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">WordPress REST API</span>
+                    <span class="tech-tag">Push Notifications</span>
+                    <span class="tech-tag">Reporting System</span>
+                </div>
+
+                <div class="project-highlights">
+                    <span class="highlight-badge">Civic Engagement</span>
+                    <span class="highlight-badge">Issue Reporting</span>
+                    <span class="highlight-badge">Digital Magazine</span>
+                </div>
+
+                <div class="audience-info">
+                    <h4>Target Audience</h4>
+                    <p>Montévrain residents and local community stakeholders actively participating in municipal governance and community life.</p>
+                </div>
+            </div>
+
+            <!-- Appointment Scheduler Pro -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">📅</div>
+                    <div class="project-title">
+                        <h3>Appointment Scheduler Pro</h3>
+                        <div class="project-subtitle">GPS Scheduling & Coordination</div>
+                    </div>
+                </div>
+                
+                <p class="project-description">
+                    Location-based scheduling and coordination tool with advanced GPS tracking, route optimization, and offline capabilities for field operations teams.
+                </p>
+
+                <div class="features-list">
+                    <h4>Key Features</h4>
+                    <div class="feature-item">Real-time GPS tracking with background updates</div>
+                    <div class="feature-item">Route optimization and geofencing check-ins</div>
+                    <div class="feature-item">Offline maps and cached data</div>
+                    <div class="feature-item">Two-way communication driver-dispatcher</div>
+                </div>
+
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <div class="meta-label">Platform</div>
+                        <div class="meta-value">Mobile + Console</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Users</div>
+                        <div class="meta-value">Drivers & Dispatchers</div>
+                    </div>
+                </div>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">NestJS</span>
+                    <span class="tech-tag">GPS Tracking</span>
+                    <span class="tech-tag">Route Optimization</span>
+                </div>
+
+                <div class="project-highlights">
+                    <span class="highlight-badge">Real-time Location</span>
+                    <span class="highlight-badge">Geofencing</span>
+                    <span class="highlight-badge">Offline Maps</span>
+                </div>
+
+                <div class="audience-info">
+                    <h4>Target Audience</h4>
+                    <p>Field drivers, dispatchers, and operations coordinators managing location-based appointments and deliveries.</p>
+                </div>
+            </div>
+
+            <!-- PI Construction Intelligence -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">🏗</div>
+                    <div class="project-title">
+                        <h3>PI Construction Intelligence</h3>
+                        <div class="project-subtitle">Offline-First Industrial Data</div>
+                    </div>
+                </div>
+                
+                <p class="project-description">
+                    Industrial field application designed for data capture and synchronization in challenging connectivity environments with robust offline-first architecture.
+                </p>
+
+                <div class="features-list">
+                    <h4>Key Features</h4>
+                    <div class="feature-item">Offline data capture with smart synchronization</div>
+                    <div class="feature-item">Document and photo management with compression</div>
+                    <div class="feature-item">Audit-safe file history and versioning</div>
+                    <div class="feature-item">Multi-language support for global teams</div>
+                </div>
+
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <div class="meta-label">Platform</div>
+                        <div class="meta-value">Mobile App</div>
                     </div>
                     <div class="meta-item">
                         <div class="meta-label">Industry</div>
@@ -500,13 +678,19 @@
                 <div class="tech-stack">
                     <span class="tech-tag">Flutter</span>
                     <span class="tech-tag">NestJS</span>
-                    <span class="tech-tag">GPS Integration</span>
                     <span class="tech-tag">Offline Sync</span>
+                    <span class="tech-tag">Document Management</span>
                 </div>
 
-                <div class="business-value">
-                    <h4>Business Impact</h4>
-                    <p>Reduced field operation costs by 35% and improved data accuracy through automated tracking and offline-capable data collection systems.</p>
+                <div class="project-highlights">
+                    <span class="highlight-badge">Poor Connectivity</span>
+                    <span class="highlight-badge">Smart Sync</span>
+                    <span class="highlight-badge">Audit Trail</span>
+                </div>
+
+                <div class="audience-info">
+                    <h4>Target Audience</h4>
+                    <p>Field technicians, site supervisors, and project managers working in construction and industrial environments.</p>
                 </div>
             </div>
 
@@ -550,43 +734,20 @@
                     <span class="tech-tag">Payment Integration</span>
                 </div>
 
-                <div class="business-value">
-                    <h4>Business Impact</h4>
-                    <p>Increased conversion rates by 25% through intuitive UI design and innovative product discovery features, setting new standards for mobile commerce.</p>
+                <div class="project-highlights">
+                    <span class="highlight-badge">Product Scanning</span>
+                    <span class="highlight-badge">Smooth Animations</span>
+                    <span class="highlight-badge">Offline Cart</span>
+                </div>
+
+                <div class="audience-info">
+                    <h4>Target Audience</h4>
+                    <p>Online shoppers and marketplace operators looking for innovative e-commerce solutions with advanced product discovery.</p>
                 </div>
             </div>
         </div>
 
-        <div class="summary">
-            <h2>Technical Excellence & Business Results</h2>
-            
-            <div class="stats">
-                <div class="stat-item">
-                    <span class="stat-number">8+</span>
-                    <div class="stat-label">Production Applications</div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">5</span>
-                    <div class="stat-label">Industries Served</div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">100%</span>
-                    <div class="stat-label">Flutter Expertise</div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">3+</span>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-            </div>
 
-            <p style="color: #555; font-size: 1.1rem; max-width: 800px; margin: 0 auto 30px;">
-                Proven track record of delivering scalable, user-centric applications that drive real business value. 
-                Expertise spans from enterprise systems to consumer applications, with strong focus on performance, 
-                offline capabilities, and cross-platform solutions.
-            </p>
-
-            <a href="#contact" class="contact-cta">Discuss Your Next Project</a>
-        </div>
     </div>
 </body>
 </html>
