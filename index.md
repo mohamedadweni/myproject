@@ -124,6 +124,9 @@ Multi-language (project-dependent)
 ### 💻 Platform  
 Mobile app + management portal
 
+### 🧰 Tech Stack  
+**Flutter + NestJS (full-stack)**
+
 ---
 
 ## 📅 **Appointment Scheduler Pro**
