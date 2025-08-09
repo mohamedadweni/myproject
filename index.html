@@ -180,24 +180,7 @@
         }
 
         .audience-info {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 15px;
-            margin-top: 20px;
-        }
-
-        .audience-info h4 {
-            color: #495057;
-            margin-bottom: 8px;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        .audience-info p {
-            color: #6c757d;
-            font-size: 0.85rem;
-            line-height: 1.5;
-            margin: 0;
+            display: none;
         }
 
         .project-highlights {
@@ -214,6 +197,40 @@
             border-radius: 15px;
             font-size: 0.75rem;
             font-weight: 500;
+        }
+
+        .trusted-companies {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .trusted-companies h4 {
+            color: #495057;
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .company-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .company-badge {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
         }
 
         .integration-list {
@@ -363,6 +380,7 @@
 
                 <div class="tech-stack">
                     <span class="tech-tag">Flutter Web</span>
+                    <span class="tech-tag">Riverpod</span>
                     <span class="tech-tag">Responsive Design</span>
                     <span class="tech-tag">Real-time Data</span>
                 </div>
@@ -374,6 +392,15 @@
                         <span class="integration-tag">Oracle</span>
                         <span class="integration-tag">MS Project</span>
                         <span class="integration-tag">Ivalua</span>
+                    </div>
+                </div>
+
+                <div class="trusted-companies">
+                    <h4>Trusted By</h4>
+                    <div class="company-badges">
+                        <span class="company-badge">BMW</span>
+                        <span class="company-badge">Allianz</span>
+                        <span class="company-badge">BNP</span>
                     </div>
                 </div>
 
@@ -418,7 +445,7 @@
 
                 <div class="tech-stack">
                     <span class="tech-tag">Flutter</span>
-                    <span class="tech-tag">NestJS</span>
+                    <span class="tech-tag">Riverpod</span>
                     <span class="tech-tag">Real-time Sync</span>
                     <span class="tech-tag">Offline Support</span>
                 </div>
@@ -470,6 +497,7 @@
 
                 <div class="tech-stack">
                     <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">Riverpod</span>
                     <span class="tech-tag">NestJS</span>
                     <span class="tech-tag">Real-time Chat</span>
                     <span class="tech-tag">Multi-tenant</span>
@@ -522,6 +550,7 @@
 
                 <div class="tech-stack">
                     <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">GetX</span>
                     <span class="tech-tag">WordPress REST API</span>
                     <span class="tech-tag">Geolocation</span>
                 </div>
@@ -573,6 +602,7 @@
 
                 <div class="tech-stack">
                     <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">GetX</span>
                     <span class="tech-tag">WordPress REST API</span>
                     <span class="tech-tag">Push Notifications</span>
                     <span class="tech-tag">Reporting System</span>
@@ -625,6 +655,7 @@
 
                 <div class="tech-stack">
                     <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">Riverpod</span>
                     <span class="tech-tag">NestJS</span>
                     <span class="tech-tag">GPS Tracking</span>
                     <span class="tech-tag">Route Optimization</span>
@@ -677,6 +708,7 @@
 
                 <div class="tech-stack">
                     <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">Riverpod</span>
                     <span class="tech-tag">NestJS</span>
                     <span class="tech-tag">Offline Sync</span>
                     <span class="tech-tag">Document Management</span>
@@ -729,7 +761,7 @@
 
                 <div class="tech-stack">
                     <span class="tech-tag">Flutter</span>
-                    <span class="tech-tag">BLoC</span>
+                    <span class="tech-tag">Riverpod</span>
                     <span class="tech-tag">Camera API</span>
                     <span class="tech-tag">Payment Integration</span>
                 </div>
