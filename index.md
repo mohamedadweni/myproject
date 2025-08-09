@@ -1,9 +1,9 @@
 ## PMC Virtual Eyes — Germany (Frontend, Flutter Web)
 
-### Overview
+### 🧭 Overview
 Flutter Web frontend for PMC — Precise Meta Controlling (Virtual Eye GmbH), delivered as a Germany-only outsourcing engagement. Single-page application focused on budget steering with plan/actual comparisons, forecast and reporting views, a centralized control layer, and audit-safe workflows.
 
-### Features
+### ✨ Features
 - Spreadsheet-like tables for plan/actual comparisons
 - Forecast and reporting dashboards
 - Real-time data refresh with status indicators
@@ -12,13 +12,13 @@ Flutter Web frontend for PMC — Precise Meta Controlling (Virtual Eye GmbH), de
 - Role-based navigation and permissions
 - Responsive layout and accessibility
 
-### Audience
+### 👥 Audience
 Finance, Controlling, and PMO teams in large enterprises.
 
-### Localization
+### 🌍 Localization
 de-DE
 
-### Platform
+### 💻 Platform
 Flutter Web SPA
 
 ### 🧰 Tech Stack
@@ -27,22 +27,22 @@ Flutter Web (frontend-only)
 ---
 ## Béthune-Bruay, My Agglo
 
-### Overview
+### 🧭 Overview
 Mobile-first municipal app facilitating access to information for the Communauté d’Agglomération Béthune-Bruay Artois Lys Romane. From a phone, users can easily read news, consult agendas, browse photo albums showcasing the territory, geolocate Agglo facilities, and access practical information.
 
-### Features
+### ✨ Features
 - News and agendas
 - Photo albums highlighting local assets
 - Geolocation of Agglo equipment and facilities
 - Practical information and contacts
 
-### Audience
+### 👥 Audience
 Residents and visitors of the Béthune-Bruay Artois Lys Romane agglomeration.
 
-### Localization
+### 🌍 Localization
 fr-FR
 
-### Platform
+### 💻 Platform
 Mobile-first (Flutter)
 
 ### 🧰 Tech Stack
